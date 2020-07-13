@@ -1,0 +1,30 @@
+{
+
+    "port": "3000",
+
+    "session": {
+        "secret": "secret",
+        "saveUninitialized": false,
+        "resave": false,
+        "proxy": true,
+        "unset": "destroy",
+        "name": "token",
+        "cookie": {
+            "path": "/",
+            "httpOnly": true, 
+            "secure": false, 
+            "maxAge": null 
+        }
+    },
+
+    "sessionStore": {
+        "url": "mongodb://127.0.0.1:27017/stax",
+        "dbName": "stax",
+        "collection": "auth.sessions",
+        "idField": "_id",
+        "mongoOptions": {
+            "useNewUrlParser": true, 
+            "useUnifiedTopology": true
+        }
+    }
+}
